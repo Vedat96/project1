@@ -1,3 +1,5 @@
+
+
 <!-- login form: 2 input fields met correcte type voor username en password.
 een login knop
 een link met de mogelijkheid een account te maken voor nieuwe gebruikers
@@ -7,10 +9,10 @@ lost password link om je wachtwoord opnieuw op te vragen. -->
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <head>
-	<title>Project1</title>
+    <title>Project1</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Project1</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,7 +28,7 @@ lost password link om je wachtwoord opnieuw op te vragen. -->
       </li>
     </ul>
     <ul>
-    	<li><a href="index.php">Log in</a></li>
+        <li><a href="index.php">Log in</a></li>
     </ul>
 <!--     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -34,20 +36,24 @@ lost password link om je wachtwoord opnieuw op te vragen. -->
     </form> -->
   </div>
 </nav>
+<form action="action_page.php">
+  <div class="container">
+    <h1>Register</h1>
+    
+    <p><label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required></p>
 
-<form action="action_page.php" method="post">
-	<div class="container">
-		<h1>Log in</h1>
-		<p><label for="username"><b>Username</b></label>
-	    <input type="text" placeholder="Enter Username" name="username" required></p>
-	    
-		<p><label for="password"><b>Password</b></label>
-	    <input type="password" placeholder="Enter Password" name="password" required></p>
-	    
+    <p><label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required></p>
 
-	    <button type="submit">Login</button>
-		<a href=" lostpsw.php">Forgot password?</a>
-	</div>
+    <p><label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required></p>
+
+    <p><label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required></p>
+
+    <button type="submit">Register</button>
+  </div>
 </form>
 </body>
 </html>

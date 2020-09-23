@@ -37,16 +37,10 @@ lost password link om je wachtwoord opnieuw op te vragen. -->
 
 <form action="action_page.php" method="post">
 	<div class="container">
-		<h1>Log in</h1>
-		<p><label for="username"><b>Username</b></label>
-	    <input type="text" placeholder="Enter Username" name="username" required></p>
-	    
-		<p><label for="password"><b>Password</b></label>
-	    <input type="password" placeholder="Enter Password" name="password" required></p>
-	    
-
-	    <button type="submit">Login</button>
-		<a href=" lostpsw.php">Forgot password?</a>
+		<h1>Reset password</h1>
+		<p><label for="email"><b>Email</b></label>
+	    <input type="text" placeholder="Enter email" name="email" required></p>
+	    <button type="submit">Reset password</button>
 	</div>
 </form>
 </body>
