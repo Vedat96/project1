@@ -2,16 +2,19 @@
 create database project1;
 -- maak tabellen aan
 	CREATE TABLE ACCOUNT(
-		ID int not null auto_increment,
-		email varchar(255) not null UNIQUE,
-		password varchar(255) not null,
+		id INT NOT NULL AUTO_INCREMENT,
+		gebruikersnaam VARCHAR(255) NOT NULL UNIQUE,
+		email VARCHAR(255) NOT NULL UNIQUE,
+		password VARCHAR(255) NOT NULL,
 		PRIMARY KEY(ID)
 	);
 
 	CREATE TABLE PERSOON(
-		ID int not null auto_increment PRIMARY KEY,
-		voornaam varchar(255) not null,
-		achternaam varchar(255) not null,
-		PRIMARY KEY(ID),	
-		FOREIGN KEY (ID) REFERENCES ACCOUNT(ID)
+		id int NOT NULL AUTO_INCREMENT,
+		account_id int NOT NULL AUTO_INCREMENT,
+		voornaam VARCHAR(255) NOT NULL,
+		tussenvoegsel VARCHAR(255),
+		achternaam VARCHAR(255) NOT NULL,
+		PRIMARY KEY(id),	
+		FOREIGN KEY (account_id) REFERENCES account(id)
 	);
